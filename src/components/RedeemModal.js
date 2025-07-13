@@ -16,12 +16,14 @@ const RedeemModal = ({ isOpen, onClose, user, token, onRefresh }) => {
   const fetchAvailableRewards = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${config.API_BASE_URL}/api/eco-rewards', {
-        headers: {
-          'Authorization': `Bearer ${token}`
+      const response = await fetch(
+        `${config.API_BASE_URL}/api/eco-rewards`, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
         }
-      });
-      
+      );
+
       if (response.ok) {
         const rewards = await response.json();
         setAvailableRewards(rewards);
@@ -43,26 +45,28 @@ const RedeemModal = ({ isOpen, onClose, user, token, onRefresh }) => {
 
     setRedeeming(true);
     try {
-      const response = await fetch(`${config.API_BASE_URL}/api/eco-rewards/redeem', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          rewardId: reward._id,
-          pointsRequired: reward.ecoPointsCost
-        })
-      });
+      const response = await fetch(
+        `${config.API_BASE_URL}/api/eco-rewards/redeem`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            rewardId: reward._id,
+            pointsRequired: reward.ecoPointsCost,
+          }),
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();
         alert(`🎉 ${reward.name} redeemed successfully! ${result.message}`);
-        if (onRefresh) onRefresh();
-        fetchAvailableRewards(); // Refresh rewards list
+        onRefresh && onRefresh();
+        fetchAvailableRewards();
       } else {
-        const error = await response.json();
-        alert(`Failed to redeem: ${error.message}`);
+        const errorData = await response.json();
+        alert(`Failed to redeem: ${errorData.message}`);
       }
     } catch (error) {
       console.error('Error redeeming reward:', error);
@@ -98,7 +102,7 @@ const RedeemModal = ({ isOpen, onClose, user, token, onRefresh }) => {
 
   const groupRewardsByTier = (rewards) => {
     const grouped = { easy: [], mid: [], hard: [], other: [] };
-    rewards.forEach(reward => {
+    rewards.forEach((reward) => {
       if (reward.tier && grouped[reward.tier]) {
         grouped[reward.tier].push(reward);
       } else {
@@ -113,8 +117,8 @@ const RedeemModal = ({ isOpen, onClose, user, token, onRefresh }) => {
   const groupedRewards = groupRewardsByTier(availableRewards);
 
   return (
-    <div className="modal-overlay">
-      <div className="redeem-modal">
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="redeem-modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2>🌱 Redeem Your EcoPoints</h2>
           <button className="close-btn" onClick={onClose}>×</button>
@@ -139,18 +143,14 @@ const RedeemModal = ({ isOpen, onClose, user, token, onRefresh }) => {
             </div>
           ) : (
             <div className="rewards-tiers">
-              {['easy', 'mid', 'hard'].map(tier => {
+              {['easy', 'mid', 'hard'].map((tier) => {
                 const tierInfo = getTierInfo(tier);
                 const tierRewards = groupedRewards[tier];
-                
                 if (tierRewards.length === 0) return null;
-                
                 return (
                   <div key={tier} className="reward-tier">
                     <div className="tier-header">
-                      <h3 className="tier-title">
-                        {tierInfo.emoji} {tierInfo.name}
-                      </h3>
+                      <h3 className="tier-title">{tierInfo.emoji} {tierInfo.name}</h3>
                       <span className="tier-range">{tierInfo.range}</span>
                     </div>
                     <div className="tier-description">
@@ -161,9 +161,7 @@ const RedeemModal = ({ isOpen, onClose, user, token, onRefresh }) => {
                     <div className="rewards-grid">
                       {tierRewards.map((reward) => (
                         <div key={reward._id} className="reward-card">
-                          <div className="reward-icon">
-                            {getRewardIcon(reward.category)}
-                          </div>
+                          <div className="reward-icon">{getRewardIcon(reward.category)}</div>
                           <div className="reward-info">
                             <h3 className="reward-name">{reward.name}</h3>
                             <p className="reward-description">{reward.description}</p>
@@ -222,4 +220,4 @@ const RedeemModal = ({ isOpen, onClose, user, token, onRefresh }) => {
   );
 };
 
-export default RedeemModal; 
+export default RedeemModal;
