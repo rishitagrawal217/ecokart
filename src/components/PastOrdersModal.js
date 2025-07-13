@@ -10,18 +10,19 @@ const PastOrdersModal = ({ isOpen, onClose, user, token, onRefresh }) => {
 
   const fetchOrders = useCallback(async () => {
     if (!isMountedRef.current) return;
-    
     setLoading(true);
     try {
-      const response = await fetch(`${config.API_BASE_URL}/api/orders/my-orders', {
-        headers: {
-          'Authorization': `Bearer ${token}`
+      const response = await fetch(
+        `${config.API_BASE_URL}/api/orders/my-orders`, {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
         }
-      });
-      
+      );
+
       if (response.ok) {
         const ordersData = await response.json();
-        // Only update state if component is still mounted
         if (isMountedRef.current) {
           setOrders(ordersData);
         }
@@ -45,15 +46,13 @@ const PastOrdersModal = ({ isOpen, onClose, user, token, onRefresh }) => {
 
   useEffect(() => {
     isMountedRef.current = true;
-    
-    if (isOpen && user) {
+    if (isOpen && user && token) {
       fetchOrders();
     }
-    
     return () => {
       isMountedRef.current = false;
     };
-  }, [isOpen, user, fetchOrders]);
+  }, [isOpen, user, token, fetchOrders]);
 
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -61,7 +60,7 @@ const PastOrdersModal = ({ isOpen, onClose, user, token, onRefresh }) => {
       month: 'long',
       day: 'numeric',
       hour: '2-digit',
-      minute: '2-digit'
+      minute: '2-digit',
     });
   };
 
@@ -77,14 +76,14 @@ const PastOrdersModal = ({ isOpen, onClose, user, token, onRefresh }) => {
   };
 
   const handleOrderClick = (order) => {
-    setSelectedOrder(selectedOrder?._id === order._id ? null : order);
+    setSelectedOrder(prev => prev?._id === order._id ? null : order);
   };
 
   if (!isOpen || !user || !token) return null;
 
   return (
-    <div className="modal-overlay">
-      <div className="past-orders-modal">
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="past-orders-modal" onClick={e => e.stopPropagation()}>
         <div className="modal-header">
           <h2>Past Orders</h2>
           <button className="close-btn" onClick={onClose}>×</button>
@@ -99,7 +98,7 @@ const PastOrdersModal = ({ isOpen, onClose, user, token, onRefresh }) => {
             </div>
           ) : (
             <div className="orders-list">
-              {orders.map((order) => (
+              {orders.map(order => (
                 <div key={order._id} className="order-card">
                   <div className="order-header" onClick={() => handleOrderClick(order)}>
                     <div className="order-info">
@@ -107,7 +106,7 @@ const PastOrdersModal = ({ isOpen, onClose, user, token, onRefresh }) => {
                       <div className="order-date">{formatDate(order.orderDate)}</div>
                     </div>
                     <div className="order-status">
-                      <span 
+                      <span
                         className="status-badge"
                         style={{ backgroundColor: getStatusColor(order.status) }}
                       >
@@ -121,18 +120,14 @@ const PastOrdersModal = ({ isOpen, onClose, user, token, onRefresh }) => {
 
                   {selectedOrder?._id === order._id && (
                     <div className="order-details">
-                      <div className="order-items">
-                        <h4>Items:</h4>
-                        {order.items.map((item, index) => (
-                          <div key={index} className="order-item">
-                            <span className="item-name">{item.productName}</span>
-                            <span className="item-quantity">x{item.quantity}</span>
-                            {item.isEcoAlternative && (
-                              <span className="eco-badge">🌱 Eco</span>
-                            )}
-                          </div>
-                        ))}
-                      </div>
+                      <h4>Items:</h4>
+                      {order.items.map((item, idx) => (
+                        <div key={idx} className="order-item">
+                          <span className="item-name">{item.productName}</span>
+                          <span className="item-quantity">x{item.quantity}</span>
+                          {item.isEcoAlternative && <span className="eco-badge">🌱 Eco</span>}
+                        </div>
+                      ))}
                     </div>
                   )}
                 </div>
@@ -145,4 +140,4 @@ const PastOrdersModal = ({ isOpen, onClose, user, token, onRefresh }) => {
   );
 };
 
-export default PastOrdersModal; 
+export default PastOrdersModal;
