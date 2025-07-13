@@ -20,8 +20,9 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
     setLoading(true);
     try {
       // Fetch balance
-      const balanceResponse = await fetch(`${config.API_BASE_URL}/api/eco-rewards/balance', {
-        headers: { 'Authorization': `Bearer ${token}` }
+      const balanceResponse = await fetch(`
+        ${config.API_BASE_URL}/api/eco-rewards/balance`, {
+        headers: { 'Authorization': `Bearer ${token}` },
       });
       if (balanceResponse.ok) {
         const balanceData = await balanceResponse.json();
@@ -29,8 +30,9 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
       }
 
       // Fetch history
-      const historyResponse = await fetch(`${config.API_BASE_URL}/api/eco-rewards/history', {
-        headers: { 'Authorization': `Bearer ${token}` }
+      const historyResponse = await fetch(`
+        ${config.API_BASE_URL}/api/eco-rewards/history`, {
+        headers: { 'Authorization': `Bearer ${token}` },
       });
       if (historyResponse.ok) {
         const historyData = await historyResponse.json();
@@ -38,8 +40,9 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
       }
 
       // Fetch redemptions
-      const redemptionsResponse = await fetch(`${config.API_BASE_URL}/api/eco-rewards/my-redemptions', {
-        headers: { 'Authorization': `Bearer ${token}` }
+      const redemptionsResponse = await fetch(`
+        ${config.API_BASE_URL}/api/eco-rewards/my-redemptions`, {
+        headers: { 'Authorization': `Bearer ${token}` },
       });
       if (redemptionsResponse.ok) {
         const redemptionsData = await redemptionsResponse.json();
@@ -47,8 +50,9 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
       }
 
       // Fetch available rewards
-      const rewardsResponse = await fetch(`${config.API_BASE_URL}/api/eco-rewards/rewards', {
-        headers: { 'Authorization': `Bearer ${token}` }
+      const rewardsResponse = await fetch(`
+        ${config.API_BASE_URL}/api/eco-rewards/rewards`, {
+        headers: { 'Authorization': `Bearer ${token}` },
       });
       if (rewardsResponse.ok) {
         const rewardsData = await rewardsResponse.json();
@@ -68,13 +72,14 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
     }
 
     try {
-      const response = await fetch(`${config.API_BASE_URL}/api/eco-rewards/redeem', {
+      const response = await fetch(`
+        ${config.API_BASE_URL}/api/eco-rewards/redeem`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ rewardId: reward._id })
+        body: JSON.stringify({ rewardId: reward._id }),
       });
 
       if (response.ok) {
@@ -83,8 +88,8 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
         fetchEcoPointsData(); // Refresh data
         if (onRefresh) onRefresh(); // Refresh parent user data
       } else {
-        const error = await response.json();
-        alert(error.message);
+        const errorData = await response.json();
+        alert(errorData.message);
       }
     } catch (error) {
       alert('Error redeeming reward');
@@ -95,15 +100,15 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short',
-      day: 'numeric'
+      day: 'numeric',
     });
   };
 
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay">
-      <div className="ecopoints-modal">
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="ecopoints-modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h2>🌱 EcoPoints Center</h2>
           <button className="close-btn" onClick={onClose}>×</button>
@@ -123,19 +128,19 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
 
           {/* Tabs */}
           <div className="tabs">
-            <button 
+            <button
               className={`tab ${activeTab === 'balance' ? 'active' : ''}`}
               onClick={() => setActiveTab('balance')}
             >
               Balance & History
             </button>
-            <button 
+            <button
               className={`tab ${activeTab === 'rewards' ? 'active' : ''}`}
               onClick={() => setActiveTab('rewards')}
             >
               Available Rewards
             </button>
-            <button 
+            <button
               className={`tab ${activeTab === 'redemptions' ? 'active' : ''}`}
               onClick={() => setActiveTab('redemptions')}
             >
@@ -155,8 +160,8 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
                     <h3>EcoPoints History</h3>
                     {history.length > 0 ? (
                       <div className="history-list">
-                        {history.map((order, index) => (
-                          <div key={index} className="history-item">
+                        {history.map((order, idx) => (
+                          <div key={idx} className="history-item">
                             <div className="history-info">
                               <span className="history-date">{formatDate(order.orderDate)}</span>
                               <span className="history-amount">+{order.ecoPointsEarned} EcoPoints</span>
@@ -176,7 +181,7 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
                   <div className="rewards-section">
                     <h3>Available Rewards</h3>
                     <div className="rewards-grid">
-                      {availableRewards.map(reward => (
+                      {availableRewards.map((reward) => (
                         <div key={reward._id} className="reward-card">
                           <h4>{reward.name}</h4>
                           <p>{reward.description}</p>
@@ -189,7 +194,7 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
                               {reward.category === 'donation' && 'Plant a Tree'}
                             </span>
                           </div>
-                          <button 
+                          <button
                             className="redeem-btn"
                             onClick={() => handleRedeemReward(reward)}
                             disabled={balance < reward.ecoPointsCost}
@@ -208,22 +213,18 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
                     <h3>My Redemptions</h3>
                     {redemptions.length > 0 ? (
                       <div className="redemptions-list">
-                        {redemptions.map(redemption => (
+                        {redemptions.map((redemption) => (
                           <div key={redemption._id} className="redemption-item">
                             <div className="redemption-info">
                               <h4>{redemption.rewardId?.name || 'Reward'}</h4>
                               <span className="redemption-date">
                                 Redeemed: {formatDate(redemption.redeemedAt)}
                               </span>
-                              <span className="redemption-status">
-                                Status: {redemption.status}
-                              </span>
+                              <span className="redemption-status">Status: {redemption.status}</span>
                             </div>
                             <div className="redemption-details">
                               <span className="points-spent">-{redemption.ecoPointsSpent} EcoPoints</span>
-                              <span className="discount-value">
-                                ${redemption.discountAmount} value
-                              </span>
+                              <span className="discount-value">${redemption.discountAmount} value</span>
                             </div>
                           </div>
                         ))}
@@ -242,4 +243,4 @@ const EcoPointsModal = ({ isOpen, onClose, user, token, onRefresh }) => {
   );
 };
 
-export default EcoPointsModal; 
+export default EcoPointsModal;
