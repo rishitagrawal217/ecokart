@@ -2,6 +2,8 @@
 
 A MERN stack e-commerce application focused on promoting eco-friendly shopping with rewards and sustainability features.
 
+<!-- Deployment ready - Updated for Vercel -->
+
 ## Features
 
 - 🌱 **Eco-friendly Product Alternatives**: Compare regular products with eco-friendly options
