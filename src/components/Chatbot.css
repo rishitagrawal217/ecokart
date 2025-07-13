@@ -1,0 +1,293 @@
+/* Floating Chatbot Styles */
+.eco-chatbot-floating {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  font-family: 'Inter', sans-serif;
+}
+
+.eco-chatbot-fab {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 24px rgba(34, 139, 34, 0.15);
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.eco-chatbot-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px rgba(34, 139, 34, 0.2);
+}
+
+.eco-chatbot-window {
+  width: 740px;
+  max-width: 95vw;
+  height: 1200px;
+  max-height: 90vh;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.eco-chatbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px 12px 24px;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid #e0e0e0;
+}
+.eco-chatbot-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #388e3c;
+}
+.eco-chatbot-logo i {
+  color: #4CAF50;
+  font-size: 1.7rem;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.eco-chatbot-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.eco-chatbot-close:hover {
+  color: #d32f2f;
+}
+
+.eco-chatbot-messages {
+  flex: 1;
+  padding: 18px 18px 0 18px;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+
+.eco-chatbot-message {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  align-items: flex-start;
+  animation: fadeInUp 0.3s;
+}
+.eco-chatbot-message.user {
+  flex-direction: row-reverse;
+}
+.eco-chatbot-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.eco-chatbot-message.bot .eco-chatbot-avatar {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+.eco-chatbot-content {
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 16px;
+  border-top-left-radius: 6px;
+  max-width: 75%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2c5530;
+  margin-bottom: 2px;
+  word-break: break-word;
+}
+.eco-chatbot-message.user .eco-chatbot-content {
+  background: linear-gradient(135deg, #e3f2fd, #f3f8ff);
+  border-left: 4px solid #2196F3;
+  margin-left: auto;
+}
+.eco-chatbot-message.bot .eco-chatbot-content {
+  background: linear-gradient(135deg, #e8f5e8, #f0f9f0);
+  border-left: 4px solid #4CAF50;
+}
+.eco-chatbot-content ul {
+  margin: 10px 0 10px 24px;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+.eco-chatbot-content li {
+  margin-bottom: 7px;
+  line-height: 1.7;
+}
+.eco-chatbot-content b {
+  font-weight: 700;
+  color: #388e3c;
+  background: none;
+}
+
+.eco-chatbot-input-area {
+  padding: 16px 18px 10px 18px;
+  background: rgba(248,249,250,0.95);
+  border-top: 1px solid #e0e0e0;
+}
+.eco-chatbot-input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+#userInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 22px;
+  font-size: 1rem;
+  outline: none;
+  background: white;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+#userInput:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76,175,80,0.08);
+}
+.eco-chatbot-send {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.eco-chatbot-send:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 15px rgba(76,175,80,0.18);
+}
+
+.eco-chatbot-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+.eco-chatbot-quick-btn {
+  padding: 9px 12px;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  background: white;
+  color: #4CAF50;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.eco-chatbot-quick-btn:hover {
+  background: #4CAF50;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(76,175,80,0.18);
+}
+.eco-chatbot-quick-btn i {
+  font-size: 1rem;
+}
+
+.eco-chatbot-footer {
+  text-align: center;
+  padding: 10px 0 12px 0;
+  color: #666;
+  font-size: 0.97rem;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Typing indicator */
+.eco-chatbot-typing {
+  display: flex;
+  gap: 5px;
+  padding: 7px 0;
+}
+.eco-chatbot-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4CAF50;
+  animation: typing 1.4s infinite ease-in-out;
+}
+.eco-chatbot-dot:nth-child(1) { animation-delay: -0.32s; }
+.eco-chatbot-dot:nth-child(2) { animation-delay: -0.16s; }
+@keyframes typing {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .eco-chatbot-window {
+    width: 98vw;
+    height: 90vh;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+  .eco-chatbot-floating {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/* Scrollbar Styling */
+.eco-chatbot-messages::-webkit-scrollbar {
+  width: 6px;
+}
+.eco-chatbot-messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+.eco-chatbot-messages::-webkit-scrollbar-thumb {
+  background: #4CAF50;
+  border-radius: 3px;
+}
+.eco-chatbot-messages::-webkit-scrollbar-thumb:hover {
+  background: #45a049;
+} 

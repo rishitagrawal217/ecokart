@@ -1,0 +1,182 @@
+.ecokart-logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #27ae60;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.home-btn {
+  background: #3498db;
+  color: #fff;
+}
+
+.home-btn:hover {
+  background: #2980b9;
+}
+
+.about-btn {
+  background: #9b59b6;
+  color: #fff;
+}
+
+.about-btn:hover {
+  background: #8e44ad;
+}
+
+.contact-btn {
+  background: #27ae60;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-btn:hover {
+  background: #219150;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.user-points {
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #27ae60;
+  border: 2px solid #27ae60;
+}
+
+.refresh-btn {
+  background: #3498db;
+  font-size: 1rem;
+  padding: 0.5rem;
+  min-width: 40px;
+}
+
+.refresh-btn:hover {
+  background: #2980b9;
+}
+
+.redeem-btn {
+  background: #e67e22;
+}
+
+.redeem-btn:hover {
+  background: #e55a2b;
+}
+
+.cart-btn {
+  background: #00bcd4;
+}
+
+.cart-btn:hover {
+  background: #0097a7;
+}
+
+.orders-btn {
+  background: #00bcd4;
+}
+
+.orders-btn:hover {
+  background: #0097a7;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+.login-btn {
+  background: #27ae60;
+  color: #fff;
+}
+
+.login-btn:hover {
+  background: #219150;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-menu {
+    order: 2;
+  }
+  
+  .nav-actions {
+    order: 3;
+  }
+  
+  .user-section {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+} 

@@ -1,0 +1,482 @@
+[
+  {
+    "category": "Home Cleaning",
+    "products": [
+      {
+        "bestseller": "Lizol disinfectant surface cleaner",
+        "ecoAlternative": "Beco disinfectant surface cleaner",
+        "pointValue": 20,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbiJ4RnDYd56Rl6wZUu1aAL1ewWRBHPbi95w&s",
+        "ecoImage": "https://www.letsbeco.com/cdn/shop/files/1_65681bff-cb07-41f9-930c-4350bf0ac002.png?v=1722600957"
+      },
+      {
+        "bestseller": "Harpic Bathroom Cleaner",
+        "ecoAlternative": "The Better Home – Natural Floor Cleaner",
+        "pointValue": 15,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/61fQA+kazoL._UF1000,1000_QL80_.jpg",
+        "ecoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKsvRPv2vf0Y6voeCK3lf2Hj5PyFBuhYtY3A&s"
+      },
+      {
+        "bestseller": "Domex Disinfectant Floor Cleaner",
+        "ecoAlternative": "PureCult – Eco-Friendly All-Purpose Cleaner",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwfZ_i96CmBz--JfUZ1XW3I6e70i8OX7gllA&s",
+        "ecoImage": "https://imgs.search.brave.com/MKLl5H1ASmMGcVHlIsmmE89SIcG7RjQmDHNXU-CHByQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTUw/MTE5MjUzNS9waG90/by95ZWxsb3ctcXVl/c3Rpb24tbWFyay1v/bi1wdXJwbGUtYmFj/a2dyb3VuZC1wYXBl/ci1jcmFmdC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9X28z/M0M1QUN4YkNYZVZo/bl9Kc2kzMlJfU3BO/QW9sRXlWZjhWU1Rf/dWF5Zz0"
+      }
+    ]
+  },
+  {
+    "category": "Kitchen & Dining",
+    "products": [
+      {
+        "bestseller": "Cello dinnerware set",
+        "ecoAlternative": "Ksamah dinnerware set",
+        "pointValue": 15,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/81A8V3UTKxL.jpg",
+        "ecoImage": "https://imgs.search.brave.com/3f3hwqvhTRCZJylOzb2i10nJC1EC7RE80ChMEqrSl2c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uZXdn/aGFyb2JhYXIuczMu/YXAtc291dGgtMS5h/bWF6b25hd3MuY29t/LzIwMjEwOV93ZWJw/L2ltZ194NTAwXzYx/MzM1OTZlMzNiMDMx/LTY5Mjk3OTA2LTEy/NDI0ODI3LndlYnA"
+      },
+      {
+        "bestseller": "Milton tiffin box",
+        "ecoAlternative": "Beco lunch box",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://www.milton.in/cdn/shop/files/tiffins.png?v=1702385329&width=2400",
+        "ecoImage": "https://m.media-amazon.com/images/I/81EDsbXx+lL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Nayasa atrige box",
+        "ecoAlternative": "The Indus Valley",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Laundry & Cleaning Products",
+    "products": [
+      {
+        "bestseller": "Surf Excel",
+        "ecoAlternative": "Beco",
+        "pointValue": 15,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://www.quickpantry.in/cdn/shop/files/SurfExcelLiquidDetergent-MaticTopLoad1L.webp?v=1737907506",
+        "ecoImage": "https://m.media-amazon.com/images/I/61mfxnPumoL._UF1000,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Rin",
+        "ecoAlternative": "The Better Home Natural Laundry Liquid",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/41ynMRBlm6L.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/516Pc45uIIL._UF1000,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Tide",
+        "ecoAlternative": "Herbal Strategi Laundry Liquid Detergent",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/61k7LBJiN7L._UF1000,1000_QL80_.jpg",
+        "ecoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxJZ-6xMgclL2LoharOmhINhb7zjolfPMeBg&s"
+      }
+    ]
+  },
+  {
+    "category": "Personal Care & Beauty",
+    "products": [
+      {
+        "bestseller": "Lakme",
+        "ecoAlternative": "Forest Essentials",
+        "pointValue": 15,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://www.lakmeindia.com/cdn/shop/files/24846_H-890103098578_1000x1000.jpg?v=1737700034",
+        "ecoImage": "https://img.forestessentialsindia.com/pub/media/catalog/category/Lip_Tints_Mobile_Banner.jpg"
+      },
+      {
+        "bestseller": "Colorbar",
+        "ecoAlternative": "Juicy Chemistry",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://www.colorbarcosmetics.com/media/wysiwyg/a-plus/face/powder-compact.webp",
+        "ecoImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1TIrQ22qbul55tOLjfgjVmmU5lxYE6B90_Q&s"
+      },
+      {
+        "bestseller": "Elle 18",
+        "ecoAlternative": "Plum",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Kids & Toys",
+    "products": [
+      {
+        "bestseller": "LEGO Classic Set",
+        "ecoAlternative": "LEGO BioBricks (plant-based plastic)",
+        "pointValue": 20,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Play-Doh",
+        "ecoAlternative": "Organic homemade-style dough",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Plastic Bath Toys",
+        "ecoAlternative": "Wooden or natural rubber bath toys",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Electronics",
+    "products": [
+      {
+        "bestseller": "Anker PowerCore Power Bank",
+        "ecoAlternative": "Solar-powered charger (e.g., Fingers SolarHunk2)",
+        "pointValue": 30,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Echo Dot",
+        "ecoAlternative": "Refurbished Echo device",
+        "pointValue": 20,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Bluetooth Earbuds",
+        "ecoAlternative": "Repairable wired earbuds or refurbished wireless",
+        "pointValue": 15,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Bath & Body",
+    "products": [
+      {
+        "bestseller": "Dove Body Wash (plastic bottle)",
+        "ecoAlternative": "Bar soap in compostable wrap",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Plastic Loofah",
+        "ecoAlternative": "Natural loofah or sea sponge",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Secret Antiperspirant",
+        "ecoAlternative": "Deodorant in cardboard tube",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Home Storage & Organization",
+    "products": [
+      {
+        "bestseller": "Plastic Bins",
+        "ecoAlternative": "Recycled cardboard or bamboo storage",
+        "pointValue": 15,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Command Strips",
+        "ecoAlternative": "Reusable adhesive hooks",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Zip Ties",
+        "ecoAlternative": "Reusable silicone twist ties",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Food Storage & Prep",
+    "products": [
+      {
+        "bestseller": "Plastic Meal Prep Containers",
+        "ecoAlternative": "Glass containers with bamboo lids",
+        "pointValue": 15,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Aluminum Foil",
+        "ecoAlternative": "Unbleached parchment paper",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Plastic Wrap",
+        "ecoAlternative": "Beeswax food wraps",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Baby & Parenting",
+    "products": [
+      {
+        "bestseller": "Huggies Diapers",
+        "ecoAlternative": "Organic cloth diapers",
+        "pointValue": 20,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Johnson's Baby Wipes",
+        "ecoAlternative": "Reusable flannel baby wipes",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Plastic Baby Spoons",
+        "ecoAlternative": "Bamboo baby spoons",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Gardening & Outdoors",
+    "products": [
+      {
+        "bestseller": "Plastic Planters",
+        "ecoAlternative": "Terracotta or coconut coir pots",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Miracle-Gro Fertilizer",
+        "ecoAlternative": "Organic compost or worm castings",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Plastic Watering Can",
+        "ecoAlternative": "Metal watering can",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Fitness & Wellness",
+    "products": [
+      {
+        "bestseller": "Foam Yoga Blocks",
+        "ecoAlternative": "Cork yoga blocks",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "PVC Yoga Mat",
+        "ecoAlternative": "Natural rubber or jute mat",
+        "pointValue": 15,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Plastic Water Bottles",
+        "ecoAlternative": "Stainless steel reusable bottle",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Travel & On-the-Go",
+    "products": [
+      {
+        "bestseller": "Travel-Size Toiletry Bottles",
+        "ecoAlternative": "Refillable silicone travel bottles",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Disposable Eye Masks",
+        "ecoAlternative": "Reusable gel eye masks",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Plastic Luggage Tags",
+        "ecoAlternative": "Wooden or recycled paper tags",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Pet Supplies",
+    "products": [
+      {
+        "bestseller": "Plastic Poop Bags",
+        "ecoAlternative": "Compostable dog waste bags",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Nylon Dog Collar",
+        "ecoAlternative": "Hemp or recycled PET collar",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Plastic Cat Litter Scoop",
+        "ecoAlternative": "Metal scoop with bamboo handle",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Office & Stationery",
+    "products": [
+      {
+        "bestseller": "Plastic Highlighters",
+        "ecoAlternative": "Refillable highlighters",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Sticky Notes",
+        "ecoAlternative": "Recycled paper sticky notes",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      },
+      {
+        "bestseller": "Plastic Pens",
+        "ecoAlternative": "Refillable pens or bamboo pens",
+        "pointValue": 10,
+        "ecoPrice": 10000,
+        "bestsellerPrice": 9000,
+        "bestsellerImage": "https://m.media-amazon.com/images/I/71vm8Ay2mpL.jpg",
+        "ecoImage": "https://m.media-amazon.com/images/I/517msQy7ytL._UF894,1000_QL80_.jpg"
+      }
+    ]
+  }
+] 
