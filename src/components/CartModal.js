@@ -9,6 +9,7 @@ const CartModal = ({ isOpen, onClose, user, token, onCheckout }) => {
 
   useEffect(() => {
     if (isOpen && token) {
+      setLoading(true);
       fetchCart();
     }
   }, [isOpen, token]);
@@ -80,7 +81,7 @@ const CartModal = ({ isOpen, onClose, user, token, onCheckout }) => {
 
   const clearCart = async () => {
     try {
-      const response = await fetch(`${config.API_BASE_URL}/api/cart/clear', {
+      const response = await fetch(`${config.API_BASE_URL}/api/cart/clear`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -99,10 +100,7 @@ const CartModal = ({ isOpen, onClose, user, token, onCheckout }) => {
     }
   };
 
-  const totalEcoPoints = cart.items.reduce((total, item) => {
-    return total + (item.ecoPoints * item.quantity);
-  }, 0);
-
+  const totalEcoPoints = cart.items.reduce((total, item) => total + (item.ecoPoints * item.quantity), 0);
   const totalItems = cart.items.reduce((total, item) => total + item.quantity, 0);
 
   if (!isOpen) return null;
@@ -145,26 +143,20 @@ const CartModal = ({ isOpen, onClose, user, token, onCheckout }) => {
                       <p className="cart-item-points">+{item.ecoPoints} EcoPoints</p>
                     )}
                   </div>
-                  
                   <div className="cart-item-controls">
                     <div className="quantity-controls">
-                      <button 
+                      <button
                         onClick={() => updateQuantity(item._id, item.quantity - 1)}
                         disabled={item.quantity <= 1}
                       >
                         -
                       </button>
                       <span>{item.quantity}</span>
-                      <button 
-                        onClick={() => updateQuantity(item._id, item.quantity + 1)}
-                      >
+                      <button onClick={() => updateQuantity(item._id, item.quantity + 1)}>
                         +
                       </button>
                     </div>
-                    <button 
-                      className="remove-item-btn"
-                      onClick={() => removeItem(item._id)}
-                    >
+                    <button className="remove-item-btn" onClick={() => removeItem(item._id)}>
                       Remove
                     </button>
                   </div>
@@ -177,7 +169,7 @@ const CartModal = ({ isOpen, onClose, user, token, onCheckout }) => {
                 <p>Total Items: {totalItems}</p>
                 <p className="total-eco-points">Total EcoPoints: +{totalEcoPoints}</p>
               </div>
-              
+
               <div className="cart-actions">
                 <button className="clear-cart-btn" onClick={clearCart}>
                   Clear Cart
@@ -194,4 +186,4 @@ const CartModal = ({ isOpen, onClose, user, token, onCheckout }) => {
   );
 };
 
-export default CartModal; 
+export default CartModal;
