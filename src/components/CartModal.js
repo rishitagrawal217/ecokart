@@ -15,7 +15,7 @@ const CartModal = ({ isOpen, onClose, user, token, onCheckout }) => {
 
   const fetchCart = async () => {
     try {
-      const response = await fetch(`${config.API_BASE_URL}/api/cart', {
+      const response = await fetch(`${config.API_BASE_URL}/api/cart`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',

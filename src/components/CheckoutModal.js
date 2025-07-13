@@ -24,7 +24,7 @@ const CheckoutModal = ({ isOpen, onClose, user, token, cartItems, onOrderComplet
 
   const fetchAvailableRewards = useCallback(async () => {
     try {
-      const response = await fetch(`${config.API_BASE_URL}/api/eco-rewards/rewards', {
+      const response = await fetch(`${config.API_BASE_URL}/api/eco-rewards/rewards`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -179,7 +179,7 @@ const CheckoutModal = ({ isOpen, onClose, user, token, cartItems, onOrderComplet
         alert('Free shipping applied!');
       } else {
         // Handle server-side rewards
-        const response = await fetch(`${config.API_BASE_URL}/api/eco-rewards/redeem', {
+        const response = await fetch(`${config.API_BASE_URL}/api/eco-rewards/redeem`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -216,7 +216,7 @@ const CheckoutModal = ({ isOpen, onClose, user, token, cartItems, onOrderComplet
 
     setLoading(true);
     try {
-      const response = await fetch(`${config.API_BASE_URL}/api/orders/checkout', {
+      const response = await fetch(`${config.API_BASE_URL}/api/orders/checkout`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
