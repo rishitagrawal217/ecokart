@@ -1,9 +1,9 @@
 # EcoKart - Sustainable E-commerce Platform
 
 A MERN stack e-commerce application focused on promoting eco-friendly shopping with rewards and sustainability features.
+## 📺 Demo Video
 
-<!-- Deployment ready - Updated for Vercel -->
-<!-- Syntax errors fixed - Ready for production -->
+Watch the full walkthrough here: [EcoKart Demo](https://www.youtube.com/watch?v=huwCNFrSrPs)
 
 ## Features
 
